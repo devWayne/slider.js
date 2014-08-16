@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>手写轮播图效果</title>
+    <link rel="stylesheet" href="slider.css">
+    <script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+    <div class="slider">
+    <div id="imgsDiv">
+        <div class="picDiv" style="background-image:url(https://i.alipayobjects.com/i/ecmng/jpg/201407/31kKIcRiQ3.jpg);"></div>
+        <div class="picDiv" style="background-image:url(https://i.alipayobjects.com/i/ecmng/jpg/201406/2pMuCMfPWf_src.jpg);"></div>
+        <div class="picDiv" style="background-image:url(https://i.alipayobjects.com/i/ecmng/jpg/201406/2pMuBhXfEr_src.jpg);"></div>
+        <div class="picDiv" style="background-image:url(https://i.alipayobjects.com/i/ecmng/jpg/201406/2pMuC9bBef_src.jpg);"></div>
+    </div>
+    <p id="dotsDiv">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </p>
+</div>
+<script src="slider.jq.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.slider').slider();
+    })
+</script>
+</body>
+</html>
