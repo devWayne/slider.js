@@ -10,6 +10,7 @@
 				init = function() {
 					imgList.css('z-index', '0').hide();
 					imgList.eq(0).css('z-index', '1').show();
+					_centershow($this.children(':eq(1)'));
 					dotList.removeClass('hover');
 					dotList.eq(0).addClass('hover');
 					_addEvent();
@@ -43,6 +44,16 @@
 				},
 				_stop=function(){
 						clearInterval(timeout);
+				},
+				_centershow=function(divName) {
+					var left = ($(window).width() - $(divName).width()) / 2;
+					var scrollLeft = $(document).scrollLeft() || 0;
+					$(divName).css({
+						position: 'absolute',
+						'left': left + scrollLeft,
+						'bottom':options.bottom+'px'
+					}).show();
+					//$('#_overlay_').show();
 				}
 			init();
 		})
@@ -50,7 +61,8 @@
 
 	$.fn.slider.defaults = {
 		last_time: 3000,
-		fade_time: 1000
+		fade_time: 1000,
+		bottom:10
 	}
 
 })($)
